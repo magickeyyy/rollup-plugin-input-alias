@@ -36,5 +36,5 @@ async function mkfile() {
         fs.promises.writeFile(FileB, ContentB),
     ]);
 }
-
+mkfile();
 async function build() {}

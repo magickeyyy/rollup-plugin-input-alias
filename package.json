@@ -4,7 +4,8 @@
     "description": "rollup path aliases plugin",
     "main": "src/index.ts",
     "scripts": {
-        "build": "rollup -c"
+        "build": "rollup -c",
+        "test": "ts-node test/build"
     },
     "keywords": [
         "alias",
