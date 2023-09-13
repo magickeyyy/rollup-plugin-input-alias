@@ -16,5 +16,5 @@ export default {
         },
     ],
     external: ['path', 'fs'],
-    plugins: [typescript(), terser()],
+    plugins: [typescript({ compilerOptions: { module: 'ESNext' } }), terser()],
 };
