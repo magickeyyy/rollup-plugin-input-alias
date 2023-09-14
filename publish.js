@@ -89,5 +89,6 @@ async function package() {
         await exec(`npm version ${version}`);
     }
     await Promise.all([readme(), package()]);
-    return exec('npm publish', { cwd: path.join(cwd, 'dist') });
+    await exec('npm publish', { cwd: path.join(cwd, 'dist') });
+    return exec('git push', { cwd });
 })();
