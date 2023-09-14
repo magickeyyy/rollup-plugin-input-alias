@@ -5,7 +5,7 @@
     "scripts": {
         "build": "rollup -c",
         "test": "ts-node --esm index.test.ts",
-        "publish": "node publish"
+        "release": "node publish"
     },
     "keywords": [
         "alias",
