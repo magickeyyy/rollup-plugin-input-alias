@@ -1,5 +1,5 @@
 {
-    "name": "@rollup/plugin-input-alias",
+    "name": "rollup-plugin-input-alias",
     "version": "1.0.1",
     "description": "rollup path aliases plugin",
     "scripts": {

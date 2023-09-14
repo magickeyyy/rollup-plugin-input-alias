@@ -15,7 +15,7 @@ const FileIndex = path.join(testDir, 'index.js');
 const FileA = path.join(testDir, 'a', 'index.js');
 const FileB = path.join(testDir, 'b.js');
 const FileC = path.join(testDir, 'c.js');
-const Answer = 'a b c @rollup/plugin-input-alias';
+const Answer = 'a b c rollup-plugin-input-alias';
 
 function exec(command: string) {
     return new Promise<void>((resolve, reject) => {

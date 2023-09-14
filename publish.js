@@ -6,6 +6,7 @@ const child_process = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
+const cwd = process.cwd();
 const version = process.argv[2];
 if (
     version &&
@@ -32,8 +33,14 @@ function exec(command, options) {
  * @description 修改readme coverage，拷贝到dist
  */
 async function readme() {
-    const md = await fs.promises.readFile(path.resolve(__dirname, 'README.md'));
-    await fs.promises.writeFile(path.resolve(__dirname, 'dist/README.md'), md);
+    const [en, zh] = await Promise.all([
+        fs.promises.readFile(path.resolve(cwd, 'README.md')),
+        fs.promises.readFile(path.resolve(cwd, 'README.zh.md')),
+    ]);
+    return Promise.all([
+        fs.promises.writeFile(path.resolve(cwd, 'dist/README.md'), en),
+        fs.promises.writeFile(path.resolve(cwd, 'dist/README.zh.md'), zh),
+    ]);
 }
 
 /**
@@ -81,5 +88,6 @@ async function package() {
     if (version) {
         await exec(`npm version ${version}`);
     }
-    return Promise.all([readme(), package()]);
+    await Promise.all([readme(), package()]);
+    return exec('npm publish', { cwd: path.join(cwd, 'dist') });
 })();
