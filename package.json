@@ -2,10 +2,10 @@
     "name": "@rollup/plugin-input-alias",
     "version": "1.0.0",
     "description": "rollup path aliases plugin",
-    "main": "src/index.ts",
     "scripts": {
         "build": "rollup -c",
-        "test": "ts-node --esm test/build.ts"
+        "test": "ts-node --esm index.test.ts",
+        "publish": "node publish"
     },
     "keywords": [
         "alias",
@@ -14,10 +14,20 @@
         "rollup-plugin",
         "rollup plugin"
     ],
-    "author": "magickeyyy <1402142639@qq.com>",
+    "author": {
+        "name": "magickeyyy",
+        "email": "1402142639@qq.com",
+        "url": "https://github.com/magickeyyy"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/magickeyyy/rollup-plugin-input-alias"
+    },
+    "homepage": "https://github.com/magickeyyy/rollup-plugin-input-alias",
     "license": "MIT",
     "devDependencies": {
         "@rollup/plugin-commonjs": "^25.0.4",
+        "@rollup/plugin-json": "^6.0.0",
         "@rollup/plugin-node-resolve": "^15.2.1",
         "@rollup/plugin-terser": "^0.4.3",
         "@rollup/plugin-typescript": "^11.1.3",
