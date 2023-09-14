@@ -8,26 +8,26 @@ rollup 路径别名插件，类似 webpack 的`resolve.alias`，配置更简单�
 pnpm
 
 ```bash
-pnpm add @rollup/plugin-input-alias --save-dev
+pnpm add rollup-plugin-input-alias --save-dev
 ```
 
 npm
 
 ```bash
-npm install @rollup/plugin-input-alias --save-dev
+npm install rollup-plugin-input-alias --save-dev
 ```
 
 yarn
 
 ```bash
-yarn add @rollup/plugin-input-alias --save-dev
+yarn add rollup-plugin-input-alias --save-dev
 ```
 
 ## 使用
 
 ```js
 // rollup.config.mjs
-import inputAlias from '@rollup/plugin-input-alias';
+import inputAlias from 'rollup-plugin-input-alias';
 
 export default {
     plugins: [inputAlias({ alias: { '@': 'src' } })],

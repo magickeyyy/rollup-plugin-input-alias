@@ -9,26 +9,26 @@ Rollup path alias plugin, similar to webpack's `resolve.alias`, with simpler con
 pnpm
 
 ```bash
-pnpm add @rollup/plugin-input-alias --save-dev
+pnpm add rollup-plugin-input-alias --save-dev
 ```
 
 npm
 
 ```bash
-npm install @rollup/plugin-input-alias --save-dev
+npm install rollup-plugin-input-alias --save-dev
 ```
 
 yarn
 
 ```bash
-yarn add @rollup/plugin-input-alias --save-dev
+yarn add rollup-plugin-input-alias --save-dev
 ```
 
 ## Usage
 
 ```js
 // rollup.config.mjs
-import inputAlias from '@rollup/plugin-input-alias';
+import inputAlias from 'rollup-plugin-input-alias';
 
 export default {
     plugins: [inputAlias({ alias: { '@': 'src' } })],
