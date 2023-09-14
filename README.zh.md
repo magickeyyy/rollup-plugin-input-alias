@@ -1,7 +1,7 @@
 # rollup-plugin-input-alias
 
 rollup 路径别名插件，类似 webpack 的`resolve.alias`，配置更简单。  
-[英语](https://github.com/magickeyyy/rollup-plugin-input-alias/blob/master/README.md)
+[English](https://github.com/magickeyyy/rollup-plugin-input-alias/blob/master/README.md)
 
 ## 安装
 
