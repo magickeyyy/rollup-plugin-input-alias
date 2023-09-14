@@ -1,6 +1,6 @@
 {
     "name": "rollup-plugin-input-alias",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "rollup path aliases plugin",
     "scripts": {
         "build": "rollup -c",
